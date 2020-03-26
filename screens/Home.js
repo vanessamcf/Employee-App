@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { StyleSheet, Text, View, Image, FlatList, Alert } from 'react-native';
 import {Card, FAB} from 'react-native-paper';
 import {useSelector, useDispatch} from 'react-redux'
+import {Mycontext} from '../App';
 
 const Home=({navigation})=>{
   // const [data,setData] = useState([])
   // const [loading,setLoading] = useState(true)
-  const dispatch = useDispatch();
-  const {data, loading} = useSelector((state)=>{
-    return state
-  })
 
+  // const dispatch = useDispatch();
+  // const {data, loading} = useSelector((state)=>{
+  //   return state
+  // })
+
+  const {state, dispatch} = useContext(Mycontext)
+  const {data, loading} = state
 
   const fetchData = ()=>{
-    fetch("http://3a29e95b.ngrok.io/")
+    fetch("http://e0ffd7af.ngrok.io/")
     .then(res=>res.json())
     .then(results=>{
       // setData(results)

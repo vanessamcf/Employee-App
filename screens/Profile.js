@@ -7,7 +7,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 const Profile = (props)=>{
   const {_id, name, email, phone, salary, position, picture} = props.route.params.item
   const deleteEmployee = ()=>{
-    fetch("http://3a29e95b.ngrok.io/delete",{
+    fetch("http://e0ffd7af.ngrok.io/delete",{
       method:"post",
       headers:{
         'Content-Type': 'application/json'

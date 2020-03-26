@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { createContext, useReducer } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import Home from './screens/Home';
@@ -10,9 +10,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createStore} from 'redux';
 import { Provider } from 'react-redux';
-import { reducer } from './reducers/reducer';
+import { reducer, initState } from './reducers/reducer';
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
+export const Mycontext = createContext();
 
 const Stack = createStackNavigator();
 
@@ -50,12 +51,16 @@ function App() {
 }
 
 export default ()=>{
+  const [state,dispatch] = useReducer(reducer, initState)
+
   return (
-    <Provider store={store}>
+    <Mycontext.Provider value={
+      {state, dispatch}
+    }>
     <NavigationContainer>
       <App />
     </NavigationContainer>
-    </Provider>
+    </Mycontext.Provider>
   )
 }
 
