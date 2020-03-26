@@ -5,13 +5,6 @@ import {useSelector, useDispatch} from 'react-redux'
 import {Mycontext} from '../App';
 
 const Home=({navigation})=>{
-  // const [data,setData] = useState([])
-  // const [loading,setLoading] = useState(true)
-
-  // const dispatch = useDispatch();
-  // const {data, loading} = useSelector((state)=>{
-  //   return state
-  // })
 
   const {state, dispatch} = useContext(Mycontext)
   const {data, loading} = state
@@ -20,8 +13,6 @@ const Home=({navigation})=>{
     fetch("http://e0ffd7af.ngrok.io/")
     .then(res=>res.json())
     .then(results=>{
-      // setData(results)
-      // setLoading(false)
       dispatch({type:"ADD_DATA", payload:results})
       dispatch({type:"SET_LOADING", payload:false})
 

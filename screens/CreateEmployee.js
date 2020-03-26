@@ -156,7 +156,6 @@ const CreateEmployee = ({navigation, route})=>{
             style={styles.inputStyle}
             value={name}
             theme={theme}
-            //onFocus={()=>setEnableShift(false)}
             autoCapitalize="words"
             mode="outlined"
             onChangeText={text => setName(text)}
@@ -166,7 +165,6 @@ const CreateEmployee = ({navigation, route})=>{
             style={styles.inputStyle}
             value={email}
             theme={theme}
-            //onFocus={()=>setEnableShift(false)}
             autoCapitalize = 'none'
             keyboardType="email-address"
             mode="outlined"
@@ -177,7 +175,6 @@ const CreateEmployee = ({navigation, route})=>{
             style={styles.inputStyle}
             value={phone}
             theme={theme}
-            //onFocus={()=>setEnableShift(false)}
             keyboardType="phone-pad"
             mode="outlined"
             onChangeText={text => setPhone(text)}
@@ -187,7 +184,6 @@ const CreateEmployee = ({navigation, route})=>{
             style={styles.inputStyle}
             value={salary}
             theme={theme}
-           // onFocus={()=>setEnableShift(true)}
             keyboardType="number-pad"
             mode="outlined"
             onChangeText={text => setSalary(text)}
@@ -197,7 +193,6 @@ const CreateEmployee = ({navigation, route})=>{
             style={styles.inputStyle}
             value={position}
             theme={theme}
-            //onFocus={()=>setEnableShift(true)}
             autoCapitalize="words"
             mode="outlined"
             onChangeText={text => setPosition(text)}
