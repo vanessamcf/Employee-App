@@ -43,7 +43,7 @@ Professor: Mukesh phulwani
 
 5⁃	Terminal 3: `cd server` `./ngrok http 3000` (with the new url is necessary change it in the files:`CreateEmployee.js`(2), `Home.js`(1) and `Profile.js`(1).
 
-6⁃	Return to the Terminal 1: yarn start
+6⁃	Return to the Terminal 1: `yarn start`
 
 > After run the expo, you can press i to run in an iOS simulator or can open your phone camera to read the code and will open the Expo (if you had already installed).
 
